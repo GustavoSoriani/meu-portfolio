@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Categoria
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of itens" (click)="abrirDetalhes(item)">
+      <ion-thumbnail slot="start">
+        <img [src]="'assets/img/' + categoriaId + '/' + item.id + '.jpg'" alt="{{ item.nome }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.nome }}</h2>
+        <p>Valor: R$ {{ item.valor }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

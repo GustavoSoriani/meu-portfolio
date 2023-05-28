@@ -1,20 +1,62 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Restaurante Soriani's
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <ion-card (click)="abrirCategoria('lanches')">
+          <img src="assets/img/lanches.jpg" alt="Lanches">
+          <ion-card-header>
+            <ion-card-title>Lanches</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      
+      <ion-col size="3">
+        <ion-card (click)="abrirCategoria('pratos-entrada-refeicao')">
+          <img src="assets/img/pratos-entrada-refeicao.jpg" alt="Pratos de Entrada e Refeições">
+          <ion-card-header>
+            <ion-card-title>Pratos de Entrada e Refeições</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    
+    
+    
+      <ion-col size="3">
+        <ion-card (click)="abrirCategoria('sobremesas')">
+          <img src="assets/img/sobremesas.jpg" alt="Sobremesas">
+          <ion-card-header>
+            <ion-card-title>Sobremesas</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      
+      <ion-col size="3">
+        <ion-card (click)="abrirCategoria('bebidas')">
+          <img src="assets/img/bebidas.jpg" alt="Bebidas">
+          <ion-card-header>
+            <ion-card-title>Bebidas</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="3">
+        <ion-card (click)="abrirPratoDia()">
+          <img src="assets/img/prato-dia.jpg" alt="Prato do Dia">
+          <ion-card-header>
+            <ion-card-title> Prato do Dia</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
